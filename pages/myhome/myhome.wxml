@@ -1,2 +1,25 @@
 <!--pages/myhome/myhome.wxml-->
-<text>pages/myhome/myhome.wxml</text>
+
+<!--第一种直接用 可以直接获取用户头像和昵称,但是没法操作数据 
+<open-data type="userAvatarUrl"></open-data>
+<open-data type="userNickName"></open-data> -->
+<view class="userinfo">
+    <block wx:if="{{userInfo}}">
+        <image class="pics" hidde='{{!userInfo}}' src="{{userInfo.avatarUrl}}"></image>
+        <text class="ttt" hidde='{{userInfo}}'>{{userInfo.nickName}}</text>
+    </block>
+    <block wx:else>
+        <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+        <view wx:else>请升级微信版本</view>
+    </block>
+</view>
+
+<navigator wx:if="{{status==0}}" class="nav fac" hover-class='none' url="./apply-listen/apply-listen"
+    open-type='navigate'>试听申请
+    <text class="wordes">
+        >
+    </text>
+
+</navigator>
+<navigator   wx:else class='nav nav bg-white margin-top' hover-class='none' url="./userInfo/userInfo"
+    open-type='navigate'>查看状态</navigator>

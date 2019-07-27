@@ -1,0 +1,66 @@
+<!--pages/myhome/apply-listen/apply-listen.wxml-->
+<form bindsubmit='submit'>
+  <view class="cu-form-group margin-top">
+    <view class="title">姓名</view>
+    <input placeholder="请输入姓名" name="name" bindinput="getName"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">年龄</view>
+    <input type='number' placeholder="请输入年龄" name="age"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">电话</view>
+    <input type='number' placeholder="电话" name="tel"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">性别</view>
+    <view>
+      <switch class="switch-sex" checked name="sex" bindchange='setGender'></switch>
+      {{gender}}
+    </view>
+  </view>
+  <view class="cu-form-group margin-top">
+    <view class="title">学历</view>
+    <picker range="{{array}}" bindchange='getEducation' value="{{index}}" name="education">
+      <view class="picker">
+        {{index?array[index]:'选择'}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">毕业院校</view>
+    <input type='text' placeholder="请输入毕业院校" name="school"></input>
+  </view>
+  <view class="cu-form-group" hidden="{{index < 1}}">
+    <view class="title">专业</view>
+    <input type='text' placeholder="请填写专业名称" name="major"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">是否已参加工作</view>
+    <switch class="red sm" bindchange='changeJob'></switch>
+  </view>
+  <view class="cu-form-group margin-top">
+    <view class="title">课程选择</view>
+    <radio-group class="radio-group" name="classId" >
+      <view class="cu-form-group">
+        <view class="title">UI</view>
+        <radio class=" margin-left-sm" checked value='1'></radio>
+      </view>
+      <view class="cu-form-group">
+        <view class="title">H5</view>
+        <radio class=" blue margin-left-sm" value='0'></radio>
+      </view>
+    </radio-group>
+  </view>
+  <view class="cu-form-group margin-top">
+    <view class="title">预定学习时间</view>
+    <picker mode="date"  bindchange='getDate' value="{{date}}" name="startDate" start="{{startDate}}" end="2050-09-01">
+      <view class="picker">
+        {{date}}
+      </view>
+    </picker>
+  </view>
+  <view class="form-group">
+		<button class="bg-green" form-type="submit">提交</button>
+	</view>
+</form>

@@ -1,0 +1,308 @@
+page {
+  height: 100%;
+}
+
+view {
+  display: inline-block;
+}
+
+.swiper-banner {
+  width: 100%;
+  height: 400rpx;
+}
+
+.swiper-banner .banner-pic {
+  width: 100%;
+  height: 400rpx;
+}
+
+.swiper-banner .banner-pic .pic {
+  width: 100%;
+  height: 400rpx;
+}
+
+.counter {
+  width: 100%;
+}
+
+.counter .count-box {
+  width: 100%;
+  height: 1630rpx;
+}
+
+.counter .count-box .about-our {
+  width: 100%;
+  height: 210rpx;
+  text-align: center;
+}
+
+.counter .count-box .about-our .about-our-one {
+  line-height: 210rpx;
+  width: 240rpx;
+  height: 100rpx;
+  font-size: 16px;
+  color: #3D3D3D;
+}
+
+.counter .count-box .about-our .about-striping {
+  display: block;
+  margin-top: 10rpx;
+  margin-left: 300rpx;
+  width: 155rpx;
+  height: 6rpx;
+  background: linear-gradient(to right, #C000FF 100%, #00C7EF 100%);
+}
+
+.counter .count-box .about-our .about-course {
+  font-size: 12px;
+  color: #9D9E9E;
+}
+
+.counter .count-box .img-bufan {
+  width: 100%;
+  height: 360rpx;
+  text-align: center;
+}
+
+.counter .count-box .img-bufan .bufans {
+  width: 85%;
+  height: 360rpx;
+}
+
+.counter .count-box .img-bufan .character-text {
+  width: 85%;
+  height: 360rpx;
+  margin: 20rpx auto;
+  font-size: 14px;
+  color: #6D6D6E;
+  line-height: 18px;
+}
+
+.counter .count-box .bufan-goods {
+  width: 100%;
+  height: 650rpx;
+}
+
+.counter .count-box .bufan-goods .goods-leading {
+  width: 100%;
+  height: 300rpx;
+  text-align: center;
+  margin-top: 30rpx;
+  background: linear-gradient(to right, #FF769B 0%, #FFC29C 100%);
+}
+
+.counter .count-box .bufan-goods .goods-leading .leading-duan {
+  margin-top: 32rpx;
+  font-size: 18px;
+  color: #FFFFFF;
+  line-height: 25px;
+}
+
+.counter .count-box .bufan-goods .goods-leading .get-job {
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.counter .count-box .bufan-goods .goods-leading .curriculum {
+  width: 180rpx;
+  height: 50rpx;
+  margin-top: 30rpx;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 30rpx;
+}
+
+.counter .count-box .bufan-goods .goods-leadings {
+  width: 100%;
+  height: 300rpx;
+  text-align: center;
+  margin-top: 30rpx;
+  background-image: linear-gradient(to right, #6BBBFF 0%, #B9A7FF 100%);
+}
+
+.counter .count-box .bufan-goods .goods-leadings .leading-duans {
+  margin-top: 32rpx;
+  font-size: 18px;
+  color: #FFFFFF;
+  line-height: 25px;
+}
+
+.counter .count-box .bufan-goods .goods-leadings .get-jobs {
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.counter .count-box .bufan-goods .goods-leadings .curriculumss {
+  width: 180rpx;
+  height: 50rpx;
+  margin-top: 30rpx;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 30rpx;
+}
+
+.counter .count-box .mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1500rpx;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 99999;
+}
+
+.counter .count-box .mask .mask-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -225rpx;
+  margin-left: -287rpx;
+  width: 574rpx;
+  height: 450rpx;
+  padding: 100rpx 108rpx;
+  font-size: 32rpx;
+  line-height: 46rpx;
+  color: #fff;
+  background-image: linear-gradient(-133deg, #6690FF 40%, #3366FF 100%);
+  border-radius: 8rpx;
+  box-sizing: border-box;
+  z-index: 99999;
+}
+
+.counter .count-box .mask .mask-content .close {
+  position: absolute;
+  top: -94rpx;
+  right: 0;
+  width: 60rpx;
+  height: 60rpx;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 99999;
+}
+
+.counter .count-box .mask .mask-content .close::after {
+  position: absolute;
+  bottom: -34rpx;
+  left: 28rpx;
+  width: 4rpx;
+  height: 34rpx;
+  background-color: #fff;
+  content: "";
+}
+
+.counter .count-below {
+  width: 100%;
+  height: 1200rpx;
+  text-align: center;
+  background-color: #3D3D3D;
+}
+
+.counter .count-below .bufan-college {
+  width: 600rpx;
+  height: 300rpx;
+  background-color: blue;
+}
+
+.counter .count-below .bufan-college .banners {
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.counter .count-below .bufan-college .ones {
+  float: left;
+}
+
+.counter .count-below .bufan-college .two {
+  float: right;
+}
+
+.counter .count-below .bufan-college .introduce {
+  width: 300rpx;
+  height: 300rpx;
+  background-color: #d5cbd8;
+}
+
+.counter .count-below .bufan-college .introduce .titles {
+  display: block;
+  text-indent: -20px;
+  margin-top: 70rpx;
+  font-size: 34rpx;
+  color: #6D6D6E;
+}
+
+.counter .count-below .bufan-college .introduce .tit {
+  color: #9D9E9E;
+  font-size: 26rpx;
+}
+
+.counter .count-boder {
+  width: 100%;
+}
+
+.counter .count-boder .swiper-pic {
+  width: 100%;
+  height: 2000rpx;
+}
+
+.counter .count-boder .swiper-pic .swiper-desImg {
+  width: 616rpx;
+  height: 340rpx;
+}
+
+.counter .count-boder .tabar {
+  margin-top: 40rpx;
+  text-align: center;
+  margin-left: 280rpx;
+}
+
+.counter .count-boder .tabar .dot {
+  width: 30rpx;
+  height: 6rpx;
+  margin-right: 20rpx;
+  background-color: #3683FF;
+  opacity: .3;
+}
+
+.counter .count-boder .tabar .dot.act {
+  opacity: 1;
+}
+
+.counter .count-boder .loyment {
+  margin: 20rpx;
+  width: 756rpx;
+  height: 280rpx;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+}
+
+.footer .adrss {
+  display: block;
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.footer .adrss-one {
+  position: absolute;
+  top: 0rpx;
+  left: 60rpx;
+}
+
+.footer .adrss-tew {
+  position: absolute;
+  top: 120rpx;
+  left: 60rpx;
+}
+
+.footer .adrss-tree {
+  position: absolute;
+  top: 235rpx;
+  left: 60rpx;
+}
+
+.footer .words {
+  text-indent: 100rpx;
+  margin: 20rpx;
+}

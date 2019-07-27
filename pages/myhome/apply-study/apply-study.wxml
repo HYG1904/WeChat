@@ -1,0 +1,50 @@
+<!--pages/myhome/apply-study/apply-study.wxml-->
+<view class="padding-xl radius shadow bg-white">tips: 请按照实际情况填写,申请提交后需同老师沟通了解宿舍的住宿和学费的相关内容,完成所有事项,通过入学审批即可等待入学</view>
+<view class="cu-form-group margin-top">
+    <view class="title">原住地</view>
+    <picker mode="region" bindchange="adrssChange" name="addrss" value="{{addrssCh}}">
+        <view class="picker">
+            当前选择：{{addrssCh}}
+        </view>
+    </picker>
+</view>
+<view class="cu-form-group margin-top">
+    <view class="title">身份证号</view>
+    <input placeholder="请输入身份证号" bindinput="getNember"></input>
+</view>
+<view class="cu-form-group margin-top">
+    <view class="title">紧急联系人</view>
+    <input placeholder="请输入联系方式" bindinput="getTel"></input>
+</view>
+<view class="cu-form-group margin-top">
+    <view class="title">宿舍</view>
+    <picker bindchange="getDrom" value="{{count}}" range-key='name' range="{{dormLs}}">
+        <view class="picker">
+            {{count?dormLs[count].name:'选择'}}
+        </view>
+    </picker>
+</view>
+<view wx:if="{{count == dormLs.length - 1}}" class="cu-form-group">
+    <view class="title">填写宿舍地址</view>
+    <input placeholder="请输入自选租住地地址" bindinput='getDormSelf'></input>
+</view>
+<view class="cu-form-group margin-top">
+    <view class="title">班级</view>
+    <picker bindchange="getClass" value="{{index}}" range="{{classLs}}" range-key="className">
+        <view class="picker">
+          {{index?classLs[index].className:'选择'}}
+        </view>
+      </picker>
+
+</view>
+<view class="cu-form-group margin-top">
+    <checkbox-group bindchange='changeAgree'>
+        <checkbox class="round" checked value="true"></checkbox>
+    </checkbox-group>
+    <navigator class="agree" open-type='navigate' url='../study-treaty/study-treaty'>同意
+        <text class="text-red text-shadow">入学协议</text>
+    </navigator>
+</view>
+<view class="padding flex flex-direction">
+    <button class="cu-btn bg-gradual-green margin-tb-sm lg" bindtap='submit'>提交数据</button>
+</view>

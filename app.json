@@ -1,29 +1,46 @@
 {
   "pages": [
+    "pages/myhome/apply-study/apply-study",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/myhome/myhome"
+    "pages/count/count",
+    "pages/myhome/myhome",
+    "pages/bufan/bufan",
+    "pages/myhome/apply-listen/apply-listen",
+    "pages/myhome/userInfo/userInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarBackgroundColor": "#84A9FF",
+    "navigationBarTitleText": "不凡学院",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-     "selectedColor":"#d81e06",
+    "selectedColor": "#d81e06",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath":"/assets/imges/home.png",
-        "selectedIconPath":"/assets/imges/home-act.png",
+        "iconPath": "/assets/imges/home.png",
+        "selectedIconPath": "/assets/imges/home-act.png",
         "text": "首页"
+      },
+      {
+        "pagePath": "pages/bufan/bufan",
+         "iconPath": "/assets/imges/goods.png",
+         "selectedIconPath": "/assets/imges/goods-act.png",
+        "text": "不凡"
+      },
+      {
+        "pagePath": "pages/count/count",
+         "iconPath": "/assets/imges/count.png",
+         "selectedIconPath": "/assets/imges/count-act.png",
+        "text": "内容"
       },
       {
         "pagePath": "pages/myhome/myhome",
         "iconPath": "/assets/imges/wode.png",
         "selectedIconPath": "/assets/imges/wode-act.png",
-         "text": "我的"
+        "text": "我的"
       }
     ]
   },

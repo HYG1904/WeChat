@@ -1,0 +1,75 @@
+<!--pages/myhome/userInfo/userInfo.wxml-->
+<view class="cu-form-group margin-top">
+    <view class="title">姓名</view>
+    <view>{{usermsg.name}}</view>
+</view>
+
+<view class="cu-form-group">
+    <view class="title">年龄</view>
+    <view>{{usermsg.age}}</view>
+</view>
+<view class="cu-form-group">
+    <view class="title">电话</view>
+    <view>{{usermsg.tel}}</view>
+</view>
+<view class="cu-form-group">
+    <view class="title">性别</view>
+    <view>{{usermsg.sexv}}</view>
+</view>
+<block wx:if="{{usermsg.status >= 3}}">
+    <view class="cu-form-group">
+        <view class="title">身份证号</view>
+        <view>{{usermsg.manID}}</view>
+    </view>
+    <view class="cu-form-group">
+        <view class="title">家庭住址</view>
+        <view>{{usermsg.cityText}}</view>
+    </view>
+    <view class="cu-form-group">
+        <view class="title">紧急联系人</view>
+        <view>{{usermsg.tel2}}</view>
+    </view>
+</block>
+
+<view class="cu-form-group margin-top">
+    <view class="title">学历</view>
+    <view>{{education[usermsg.education]}}</view>
+</view>
+<view class="cu-form-group" hidden="{{usermsg.education < 1}}">
+    <view class="title">专业</view>
+    <view>{{usermsg.major}}</view>
+</view>
+
+<view class="cu-form-group">
+    <view class="title">毕业院校</view>
+    <view>{{usermsg.school}}</view>
+</view>
+
+<block wx:if="{{usermsg.status >= 3}}">
+    <view class='cu-form-group margin-top'>
+        <view class="title">入学班级名称</view>
+        <view>{{usermsg.classname}}</view>
+    </view>
+    <view class='cu-form-group'>
+        <view class="title">入学宿舍地址</view>
+        <view>{{usermsg.address ? usermsg.address : usermsg.dormname}}</view>
+    </view>
+</block>
+<block wx:else>
+    <view class='cu-form-group margin-top'>
+        <view class="title">课程选择</view>
+        <view>{{usermsg.classId == "0" ? "H5" : "UI"}}</view>
+    </view>
+</block>
+<view class="cu-form-group margin-bottom">
+    <view class="title">申请状态</view>
+    <view wx:if="{{usermsg.status == 1}}">正在申请试听</view>
+    <view class="text-green" wx:elif="{{usermsg.status == 2}}">通过试听申请</view>
+    <view wx:elif="{{usermsg.status == 3 }}">正在申请入学</view>
+    <view class="text-green" wx:elif="{{usermsg.status == 4}}">通过入学申请</view>
+    <view class="text-green" wx:else>毕业了</view>
+</view>
+
+<view class="padding flex flex-direction" wx:if="{{usermsg.status == 2}}">
+    <button class="cu-btn bg-green margin-tb-sm lg" bindtap="jumpTo">入学申请</button>
+</view>

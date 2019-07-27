@@ -1,0 +1,5 @@
+<!--components/self-button/self-button.wxml-->
+<button class="default {{classStr}}" style="color: {{color}}; border-color: {{color}}; background-color: {{bgColor}};">{{text}}
+ 
+</button>
+

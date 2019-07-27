@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "teacher-bar":"../../components/self-publc/self-publc"
+  },
+  "navigationBarBackgroundColor": "#484ace"
+}

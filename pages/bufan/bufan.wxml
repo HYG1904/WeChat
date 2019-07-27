@@ -1,0 +1,146 @@
+<!--pages/bufan/bufan.wxml-->
+<!-- 轮播部分 -->
+<swiper class="swiper-banner" circular="{{true}}" autoplay="{{autoplay}}" interval="{{interval}}"
+  duration="{{duration}}" indicator-dots="{{indicatorDots}}">
+  <!-- 所有的图片地址 更改为： http://www.bufanui.com/v1/m/ + 图片的url -->
+  <block>
+    <swiper-item class="banner-pic ">
+      <image class="pic" src="../../assets/imges/bf_s.jpg" />
+    </swiper-item>
+    <swiper-item>
+      <image class="pic" src="//img.tukuppt.com//ad_preview/00/03/30/5c98a556e3a89.jpg!/fw/780" />
+    </swiper-item>
+    <swiper-item>
+      <image class="pic" src="//img.tukuppt.com//ad_preview/00/03/84/5c98b22ae5a40.jpg!/fw/780" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class="counter">
+  <!-- 内容上部分 -->
+  <view class="count-box">
+    <view class="about-our">
+      <view class="about-our-one">关于我们</view>
+      <view class="about-striping"></view>
+      <view class="about-course">Course </view>
+    </view>
+    <view class="img-bufan">
+      <image class="bufans" src="../../assets/imges/about_us.jpg" />
+      <view class="character-text">
+        不凡学院老师由一帮80后老北漂组成。我们分别来自于腾讯网，凤凰网，网易 等北京知名互联网公司，我们都曾奋斗在一线岗位，都曾面试新人，带新人，深知公司需要什么样的人才。我们会通过实战项目结合
+        培训的教学模式，把知名互联网公司的工作流程，设计方法，开发方 式手把手的教给大家，在不凡学习就相当于工作，高薪就业你也行！
+      </view>
+    </view>
+    <view class="bufan-goods">
+      <view class="goods-leading">
+        <view class="leading-duan"> uI设计</view>
+        <view class="get-job">
+          就业方向：网页设计，APP设计，管理系统软件设计
+          智能电视，车载系统，智能穿戴设备等软件设计
+        </view>
+        <view class="curriculum" bindtap="showMask" data-title="ui">
+          课程详情
+        </view>
+      </view>
+      <view class="goods-leadings">
+        <view class="leading-duans"> H5前端设计开发</view>
+        <view class="get-jobs">
+          就业方向：网站开发，网页特效开发，APP开发
+          微信小程序开发，网页游戏开发，移动WEB开发
+        </view>
+        <view class="curriculumss" bindtap="showMask" data-title="h5">
+          课程详情
+        </view>
+      </view>
+    </view>
+    <view class="mask" wx:if="{{mask}}" bindtap='closeMask'>
+      <view class='mask-content'  catchtap="maskContentTap">
+         <view class='close' catchtap="closeMask"></view> 
+        <view class='mask-title'>{{maskTitle}}</view>
+        <view class='mask-text'>课程周期：3个月</view>
+        <view class='mask-text'>上课时间：周一至周五</view>
+        <view class='mask-text'>招生对象：大专以上学历</view>
+        <view class='mask-text'>班级人数：每班限制15人</view>
+      </view>
+    </view>
+
+  </view>
+  <!-- 内容中部分 -->
+  <view class="count-below">
+    <teacher-bar textColor="#ffff" textTitle="教学环境" bgColor="#C000FF 100%,#00C7EF 100%" lineColor="#9D9E9E"
+      textEndlish=" Environment"></teacher-bar>
+    <view class="bufan-college">
+      <image class="banners ones" src="../../assets/imges/evn_1.jpg" />
+      <view class="introduce">
+        <text class="titles">不凡学院</text>
+        <text class="tit">平凡人的不平凡
+          我们在学院等你</text>
+      </view>
+    </view>
+    <view class="bufan-college">
+      <view class="introduce">
+        <text class="titles">全Mac教学</text>
+        <text class="tit">全MAC设备，与一线互联网公司设备同步，提前适应工作环境！</text>
+      </view>
+      <image class="banners two" src="../../assets/imges/evn_2.jpg" />
+    </view>
+    <view class="bufan-college">
+      <image class="banners ones" src="../../assets/imges/evn_1.jpg" />
+      <view class="introduce">
+        <text class="titles">休息角</text>
+        <text class="tit">小资的学习环境，引爆你的设计灵感！</text>
+      </view>
+    </view>
+  </view>
+  <!-- 内容中下部分 -->
+  <view class="count-boder">
+    <teacher-bar textColor="#3D3D3D " textTitle="学员作品" bgColor="#00A4FF 100%,#31DBFF 100%" lineColor="#9D9E9E"
+      textEndlish="Design"></teacher-bar>
+    <!-- 轮播部分 -->
+    <swiper class="swiper-pic" previous-margin="26rpx" next-margin="40rpx" bindchange="changeIndex"
+      current="{{currentIndex}}">
+      <block wx:for="{{bigarr}}" wx:for-item="designs" wx:for-index="i" wx:key="{{i}}">
+        <swiper-item>
+          <block wx:for="{{designs}}" wx:key="index">
+            <image data-index="{{index}}" class="swiper-desImg" src='{{ "http://www.bufanui.com/v1/m/"+item.url}}'
+              mode="widthFix"></image>
+          </block>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- 小点部分  -->
+    <view class="tabar fc">
+      <block wx:for="{{bigarr}}" wx:key="{{index}}">
+        <view data-index="{{index}}" class='dot {{index===currentIndex?"act":""}}' bindtap="changeCount">
+        </view>
+      </block>
+    </view>
+    <teacher-bar textColor="#3D3D3D " textTitle="学员就业" bgColor="#00A4FF 100%,#31DBFF 100%" lineColor="#9D9E9E"
+      textEndlish="Employment"></teacher-bar>
+    <!-- 学员就业 -->
+    <view class="count-imges">
+      <image class="loyment" src="../../assets/imges/em_1.jpg" />
+      <image class="loyment" src="../../assets/imges/em_2.jpg" />
+      <image class="loyment" src="../../assets/imges/em_3.jpg" />
+    </view>
+    <teacher-bar textColor="#3D3D3D " textTitle="练系我们" bgColor="#00A4FF 100%,#31DBFF 100%" lineColor="#9D9E9E"
+      textEndlish="Contact us"></teacher-bar>
+  </view>
+</view>
+
+<view class="footer">
+  <image class="adrss" src="../../assets/imges/address.png" />
+  <text class="adrss-one">地址</text>
+  <view class="words">
+    郑州市郑东新区金水东路绿地新都会6号楼1210
+  </view>
+  <image class="adrss" src="../../assets/imges/way_1.png" />
+  <text class="adrss-tew">乘车路线</text>
+  <view class="words">
+    地铁1号线 东风南路站C口出向北步行300米即到
+  </view>
+  <image class="adrss" src="../../assets/imges/phone_2.png" />
+  <text class="adrss-tree">电话</text>
+  <view class="words">
+    QQ: 移动电话:13525333034
+  </view>
+</view>

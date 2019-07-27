@@ -1,0 +1,8 @@
+<!--components/self-public/self-publc.wxml-->
+<view class="teaching-box" >
+    <text class="details-title" style="color: {{textColor}};">{{textTitle}}</text>
+     <view class="details-line" style="background-image: linear-gradient(to right,{{bgColor}});">
+     </view>
+     <view class="details-english" style="color: {{lineColor}};">{{textEndlish}}</view>      
+</view>
+  

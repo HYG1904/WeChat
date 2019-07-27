@@ -1,0 +1,21 @@
+/* components/self-button/self-button.wxss */
+ .outline{
+  border-width: 1px;
+  border-style: solid;
+} 
+
+.small{
+  width: 30%;
+}
+
+.middle{
+  width: 60%;
+}
+
+.large{
+  width: 80%;
+}
+
+.default{
+  background: none;
+}

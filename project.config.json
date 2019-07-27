@@ -4,16 +4,24 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
+		"coverView": true,
 		"autoAudits": false,
-		"coverView": true
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.0.4",
+	"libVersion": "2.7.4",
 	"appid": "wx897f51a6e84e3a1d",
 	"projectname": "weixinapi",
 	"debugOptions": {
@@ -31,13 +39,52 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 4,
+			"list": [
+				{
+					"id": 0,
+					"name": "我的主页",
+					"pathName": "pages/myhome/myhome",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "申请试听",
+					"pathName": "pages/myhome/apply-listen/apply-listen",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "查看状态",
+					"pathName": "pages/myhome/userInfo/userInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提交入学申请",
+					"pathName": "pages/myhome/apply-study/apply-study",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "不凡学院",
+					"pathName": "pages/bufan/bufan",
+					"scene": null
+				}
+			]
 		}
 	}
 }

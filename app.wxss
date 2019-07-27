@@ -1,4 +1,8 @@
 /**app.wxss**/
+@import "/assets/colostyle/main.wxss";
+@import "/assets/colostyle/icon.wxss";
+@import "/assets/colostyle/animation.wxss";
+
 .container {
   height: 100%;
   display: flex;

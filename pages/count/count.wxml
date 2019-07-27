@@ -1,0 +1,30 @@
+<!--pages/count/count.wxml-->
+<swiper   autoplay="{{autoplay}}"  interval="{{interval}}" duration="{{duration}}" indicator-dots="{{indicatorDots}}" >
+  <block >
+    <swiper-item >
+      <image src="//preview.qiantucdn.com/58picmark/back_origin_pic/34/46/24/20c58PIC3P85JIQhxG0MFMaRk.jpg!w1024_small" class="slide-image" width="355" height="150" />
+    </swiper-item>
+     <swiper-item>
+      <image src="//img.tukuppt.com//ad_preview/00/03/30/5c98a556e3a89.jpg!/fw/780" class="slide-image" width="355" height="150" />
+    </swiper-item>
+     <swiper-item>
+      <image src="//img.tukuppt.com//ad_preview/00/03/84/5c98b22ae5a40.jpg!/fw/780" class="slide-image" width="355" height="150" />
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 下面的轮播 -->
+  <view class='tabbar'>
+  <block wx:for="{{tabs}}" wx:key="{{index}}">
+    <view class="{{currentIndex === index ? 'act ' + old[index] : old[index]}}" bindtap="chengeCount" data-index="{{index}}">{{item}}</view>
+  </block>
+</view>
+<swiper  class="swiper-box" current="{{currentIndex}}" bindchange="chengeSwiper"  >
+  <block wx:for="{{Arrays}}" wx:key="{{i}}" wx:for-index="i" wx:for-item="colorItem">
+    <swiper-item >
+        <block wx:for="{{colorItem.list}}" wx:key="{{index}}">
+           <view style="background-color:{{item}}"></view>
+        </block>
+    </swiper-item>
+  </block>
+</swiper>
+
